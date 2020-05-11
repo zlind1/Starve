@@ -1,16 +1,18 @@
 import React from 'react';
-import {Route, Link} from 'react-router-dom';
+import {Route} from 'react-router-dom';
+import Login from './components/Login';
+import Home from './components/Home';
 
 export default function App() {
   return (
     <div className='App'>
       <Route exact path='/'>
         <h1>Home page</h1>
-        <Link to='/login'>Login</Link>
+        <Home />
       </Route>
       <Route exact path='/login'>
         <h1>Login page</h1>
-        <Link to='/'>Home</Link>
+        <Login />
       </Route>
     </div>
   );
