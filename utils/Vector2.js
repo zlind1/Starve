@@ -15,7 +15,7 @@ class Vector2 {
 
   scale_i = (scalar) => { this.x *= scalar; this.y *= scalar; return this; }
   scale = (scalar) => new Vector2(this.x, this.y).scale_i(scalar);
-  
+
   norm_i = () => this.scale_i(1/this.length());
   norm = () => new Vector2(this.x, this.y).norm_i();
 
@@ -29,3 +29,5 @@ class Vector2 {
   rotate = (angle) => this.lookAt(this.angle()+angle);
   print = () => { console.log('('+this.x+', '+this.y+')'); }
 }
+
+let V2 = (x, y) => new Vector2(x, y);
